@@ -329,4 +329,66 @@
 #    print("Eligiable")
 #else:
 #    print("Not Eligible")
-    
+
+
+
+### first name
+first_name = input("Enter your name: ")
+if first_name =="":
+    print("First name cannot be empty.")
+elif not first_name.isalpha():
+    print("Must be letters only")
+else:
+    print("Valid")
+
+###Last name
+last_name = input("Enter your last name: ")
+if last_name=="":
+
+    print("Last name cannot be empty")
+elif last_name.isalpha:
+    print("Valid")
+else:
+    print("Must be lettrs only.")
+
+
+###email
+email = input("Enter your E-mail")
+if "@"in email and "." in email:
+    print("Valid")
+else:
+    print("Invalid")
+
+
+###Re-email
+re_email = input("Enter your email again")
+if re_email == email:
+    print("Valid")
+else:
+    print("E-mail and re-email doesnot match")
+
+
+####Password
+password = int(input("Enter your password"))
+if len(password) >=6:
+    print("Valid")
+else:
+    print("minimum 6 characters needed")
+
+
+
+
+##if not (First_name and Last_name):
+##  print("all fields are mandatory")
+#elif not(first_name.isaplha() and last_name,isalpha()):
+     #print("must enter letters only")
+#elif not("@" in email and "." in email):
+    #print("INvalid")
+#elif not(email == re-email):
+    #print("email not matched")
+
+
+
+
+####  Match case:used if the codes are same
+
