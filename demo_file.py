@@ -477,173 +477,146 @@
 
 
 
-####   Questions
-#5.
-total_purchase_amount = int(input("Enter your purchase amount"))
-user_input = 6000
-if total_purchase_amount>5000:
-   has_membership = input("Do you have membership?").lower()
-   if has_membership == "yes":
-     persent_membership = input("do you have membership card now?").lower()
-     if persent_membership =="yes": 
-      discount=total_purchase_amount*0.30
-      final_amount=total_purchase_amount - discount
-      print(f"final amount = {discount}")
-      print(f"Total saved = {final_amount}" )
-     else:
-        print(f"Final bill = {total_purchase_amount}")
-   else:
-     print(f"Final bill = {total_purchase_amount}") 
-else:
-    print(f"Final bill = {total_purchase_amount}")
+####   Data structure
+#1) List []
+#list can store all kind of data types.
 
 
 
-#6
-print("Welcome to the Magic Forest")
-direction = input("Go north or south").lower()
-if direction =="north":
-   print("stage 2")
-   path = input("cross the river or follow the path").lower()
-   if path == ("cross the river"):
-      print("Stage 3")
-      angel = input("Chose fairy,ogre and elf").lower()
-      if angel==("elf"):
-         print("Stage 4")
-      else:
-         print("Game over")
-   else:
-      print("Game over")
-else:
-   print("Game Over")
+###how to add elements in list
+######append=adds append(), it adds that entire list as a single nested element.
+#nums = [1, 2, 3]
+#nums.append([4, 5]) 
+# Result: [1, 2, 3, [4, 5]]
 
+######
+#nsert(index, object)=Use this when you need to put an item in a specific spot rather than at the end
+#nums = [1, 2, 3]
+#nums.insert(1, "new") # Inserts at index 1
+# Result: [1, "new", 2, 3]
+#can only add iterable objects ie the object that can be used in indexing or loop
 
-#10.
-body_weight = float(input("Enter your body weight"))
-height = float(input("Enter your height"))
-BMI = body_weight/(height**2)
+#####. extend(object);adds at the last individually.
 
-if BMI<18.5:
-   print("Underweight")
-elif 18.5<= BMI<=25:
-   print("Normal weight")
-elif 25<BMI<=30:
-   print("Overweight")
-else:
-    print("Obese")
+#cart = ['apple','orange']
+#cart.extend('orange')
+#cart.extend('orange')
+#cart.insert(0,"coke")
+#print(cart)
 
 
 
-#16
-units = float(input("Enter your electricity units"))
-if units<=100:
-   cost = units*5
-   print(f"total_cost={cost}")
-elif 100<units<=300:
-   cost = (100*5)+((units-100)*8)
-   print(f"total cost = {cost}")
-else:
-   cost=(100*5)+(200*8)+((units-200)*10)
-   print(f"total cost = {cost}")
-
-#19. A store gives a 20% discount if the total purchase is above RS
-#1000 AND the customer is a member, or a 10% discount if the
-#purchase is above RS 1000 but the customer is not a member. Write a
-#program that takes total_amount and is_member (True/False) as
-#input and prints the final amount after applying the correct discount
-#or no discount
-total_amount=int(input("Enter your amount"))
-if total_purchase_amount>1000:
-   is_member = input("Are you member(yes/no?").lower()
-   if is_member == "yes":
-      discount=total_amount*0.20
-      final_amount=total_amount-discount
-      print(f"final amount={final_amount}")
-   else:
-      discount=total_amount*0.10
-      final_amount=total_amount-discount
-      print(f"Final amount={final_amount}")
-else:
-   print(f"Final amount={total_amount}")
-
-#20
-weight=float(input("Enter your earth weight: "))
-planet={
-   1:0.38,
-   2:0.91,
-   3:0.38,
-   4:2.53,
-   5:1.07,
-   6:0.89,
-   7:1.14
-}
-planet_number=int(input("Enter your planet number(1-7): "))
-if planet_number in planet:
-   gravity=planet[planet_number]
-   print(f"weight={weight}*{planet}")
-else:
-   print("Invalid planet number")
+###### how to remove in list
+#remove=Use this when you know exactly what item you want to get rid of, but don't necessarily know where it is in the lis
+#fruits = ['apple', 'banana', 'cherry', 'banana']
+#fruits.remove('banana') 
+# Result: ['apple', 'cherry', 'banana'] (Only the first 'banana' is gone)
 
 
-#21
-math =float(input("Enter maths mark"))
-science =float(input("Enter science mark"))
-social =float(input("Enter social mark"))
-nepali =float(input("Enter nepali mark"))
+#pop=Use this when you know the position of the item or when you need to use the deleted item after it’s removed
+#fruits = ['apple', 'banana', 'cherry']
 
-total_marks=math+science+social+nepali
-print(f"total marks = {total_marks}")
-percentage = (total_marks/400)*100
-print(f"percentage={percentage}")
-if percentage > 70:
-   print("grade:distinction")
-elif percentage>60:
-   print("First")
-elif percentage>40:
-   print("pass")
-else:
-   print("fail")
+# Remove by index
+#second_item = fruits.pop(1) 
+# second_item is 'banana'; fruits is now ['apple', 'cherry']
 
-#22
-is_card_valid="true"
-initial_balance = 5000
-correct_pin=123
-
-pin=int(input("Enter your pin"))
-if pin == correct_pin:
-   while True:
-      print("\n---ATM MENU---")
-      print("1=Withdraw")
-      print("2=check Balance")
-      print("3=Exit")
-      choice = input("Select an option(1-3: ")
-      if choice == "1":
-         amount=float(input("Enter amount to withdraw"))
-         if amount<=initial_balance:
-            balance = initial_balance-amount
-            print(f"Rs{amount} is detucted.you current balance is Rs{balance}")
-         else:
-            print("indufficient balance")
-      elif choice =="2":
-         print(f'Balance ={initial_balance}')
-      elif choice =="3":
-          print("Thank you for visiting.")
-      else:
-         print("Invalid option.")
-else:
-   print("Incorrect pin")
+# Remove the last item (default)
+#last_item = fruits.pop() 
+# last_item is 'cherry'; fruits is now ['apple']
 
 
-#23
-target_floor=int(input("Enter your floor number(0-10): "))
-weight=float(input("Enter your weight(In KG): "))
-door_status=input("Is door open or closed?: ").lower()
 
-if 0>target_floor or target_floor>10:
-   print("Invalid Floor")
-elif weight>500:
-   print("over weight:lift cannot move")
-elif door_status =="open":
-   print("WARNING:CLOSE THE DOOR")
-else:
-   print("ACTIVATE ELEVATOR MOTION")
+###modify
+#cart =['apple','orange']
+#cart[0]="cake"
+#print(cart)
+
+####tuple:
+#A tuple is an immutable ordered collection of elements.
+
+#Tuples are similar to lists, but unlike lists, they cannot be changed after their creation.
+#Can hold elements of different data types.
+#These are ordered, heterogeneous and immutable.
+
+#cart = 1,2,3,4,5
+#print(cart[1:])
+### chamge in list
+#cart1=list(cart)
+#cart1.pop(0)
+#print(cart)
+
+
+####set
+#empty_set 
+#1)items=set()
+#i
+#tems={*()}
+# set doesnot have ordern.so we cannot do slicing and indexing
+# set is unchangable
+#hASTABLE Data structure create hashvalue for all the element and checks for same hasvalue for the same number and rejects them
+#set cannot be modified-
+
+###how to add items in set
+#items ={1,2,3,4}
+#items.add(6) to add one element
+#items.update({7,8}) to add multiple element
+
+####how to delete
+#remove needs  to mention the element and  removes the element if present and if not present shows error
+#discaed removes the element if present or gives the same output
+#pop delets the first elemrnt as we cannot do indexing
+## clear removes all and gives thr output empty set like set()
+
+#difference = doesnA-b in set
+#symmetric_difference=remoces all the common elemrnts and add the two set 
+##union(|)=combines all the set
+#intersection=writes only common
+#is_disjoint=gives true if any elements of set1 is not present in set2
+#is_subset=gives true if all the items are same from left to right
+#items3=items.issuperset(items4)
+#is_superset=gives true if all the items are same from rightto left
+
+####   dictionary
+#key value pair
+#key is immutable and unique and value can be mutable or immutable
+
+
+#how to get the value
+#fruits = {"apple":"red","orange":"orange"}
+#print(fruit['apple'])
+#result.get("mango","fruit not found")
+#print(result)
+
+
+##how to add in dict
+#fruits = {"apple":"red","orange":"orange"}
+#fruit["mango"]="yellow"
+
+#add many key value pairs
+#del
+#fruits = {"apple":"red","orange":"orange"}
+#fruits.update({"mango":"yellow","kiwi":"green"})
+
+
+###how to remove
+#fruits = {"apple":"red","orange":"orange"}
+#del fruits["apple"]
+
+
+#pop
+#fruits.pop()    #must pass the key
+#fruits.popitem() #removes the last key and value
+
+#clear
+#fruits.clear()
+
+##key,values and items
+#fruits = {"apple":"red","orange":"orange"}
+
+#nested dictionary
+#students ={
+#    "Ram":{"Math":34,"science":65},
+#    "sita":{"Math":45,"science":56},
+#}
+#print(students["Ram"]["Math"])
+
