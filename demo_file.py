@@ -622,5 +622,206 @@
 
 
 
-data = {"a":10,"b":20,"a":30}
-print(data)
+####  loop
+# for loop and while loop
+#for loop
+#fruits = ('apple','banana','grapes')
+#for i in fruits:
+#    print(i)
+
+#for i in range(1,101):
+#    print(i)
+
+#num = [4,7,1,9,3]
+#total = 0
+
+#direct
+#for n in num:
+#    total = total + n
+#print(total)
+
+
+#by using indexing or range
+#for n in range(len(num)):
+#    total = total + num(n)
+#print(total)
+
+
+#number = [2,3,4,5,6,7,8]
+#total = 0
+#even = []
+#odd = []
+#for i in range(len(number)):
+#    if number[i]%2==0:
+#        total += number[i]
+#        even.append(number[i])
+#        print(even)
+#    else:
+#        odd.append(number[i])
+#print(f"even numbers:{even}")
+#print(f"odd number:{odd}")
+#print(f"total number:{total}")
+
+
+
+#1
+#num = [1,2,3,4,5]
+#for i in range(len(num)):
+#    if num[i]%2==0:
+#        print(f"{num[i]} is even")
+#    else:
+#        print(f"{num[i]} is odd")
+
+        
+#2
+#list = [10,20,30,40]
+#total_sum = 0
+#for i in list:
+#    total_sum+=i
+#    print(f"added {i}.running total is {total_sum}")
+#print(f"\nTotal sum :{total_sum}")
+
+
+'''students = {
+    'ram':76,
+    'sita':44,
+    'hari':91,
+    'gita':33
+}
+#for name,marks in students.items():
+#    if marks>44:
+#        print(f"{name}:{marks}")
+
+#for name,marks in students.items():
+#    if name.startswith("r")  or name.startswith("s"):
+#        print(f"{name}:{marks}")
+
+cart = {
+    'rice':(2,140),
+    'milk':(3,50),
+    'bread':(4,35)
+}
+total_price = 0
+for i,(j,k) in cart.items():
+        print(f"{i},{j},{k} ,{j*k}")
+        total_price += (j*k)
+        print(total_price)
+
+file_name = ['loop.py','photo.3pg','xyz.exe','abc.exe']
+new_file=[]
+for i in file_name:
+        if i.endswith(".exe"):
+          continue
+        new_file.append(i)
+print(new_file)
+
+cart = ['milk','milk','apple','orange''orange']
+expexted output
+{'milk:2,'apple':1,'}
+count = {}
+for i in cart:
+    if i in count:
+          count[i]+=1
+    else:
+          count[i]=1
+print(count)
+
+cart = [1,2,3,-11,13,14,-20]
+odd = []
+even = []
+negative=[]
+for i in cart:
+      if i<0:
+            negative.append(i)
+      elif i%2!=0:
+            odd.append(i)
+      else:
+            even.append(i)
+print (odd)
+print(even)
+print(negative)'''
+
+     
+ ####nested loop
+#sample_data = {'A':[1,2,3],'B':[1,2,3,4,5]}
+#for column,row in sample_data.items():
+#    print(column)
+#    for cell in row:
+#        print(cell)
+#    print()
+
+
+#break
+#for i in range(1,5):
+#    if i ==2:
+#        break
+#    print(i)
+
+#continue
+'''for i in range(1.6):
+    if i ==2:
+        continue
+    print(i)'''
+
+'''sample_data = {'A':[1,2,3],'B':[1,2,3,4,5],'c':[1,2]}
+for column,row in sample_data.items():
+    if column =="B":
+      continue
+    print(column)
+    for cell in row:
+      if cell == 3 and column == "A":
+         continue
+      print(cell)
+    print()'''
+
+'''num = [3,5,6,7,8]
+for i in num:
+ if i ==5 or i==6:
+  continue
+for j in range(1,11):
+   print(f'{i}*{j}={i*j}')
+   print()'''
+
+###enumwrate
+'''data = ['app','sjd']
+for i,j in enumerate(data,start=1)
+   print()'''
+
+quiz_data = {
+
+'qno1': {
+'question': 'Which Python library is used for building Desktop GUI ?',
+'options': ['NumPy', 'Tkinter', 'Pandas', 'Flask'],
+'answer': 'Tkinter'
+ },
+
+'qno2': {
+'question': "What is the result of 4 7 in Python?",
+'options': ['True', 'False', 'Error', 'None'],
+'answer': 'False'
+  },
+
+'qno3': {
+'question': 'Which set method is used to check if two sets have no common items ?',
+'options': ['issubset()', 'intersection()', 'isdisjoint()', 'difference ()'],
+'answer': 'isdisjoint()'
+  }
+
+}
+score = 0
+for no , quest in quiz_data.items():
+    print(no,'',quest['question'])
+    for option in quest['options']:
+       print(quest)
+
+    user_input =input("Enter your answer: ")
+    if user_input==quest['options']:
+     score+=1
+print(score)
+
+     
+
+
+
+
+  
